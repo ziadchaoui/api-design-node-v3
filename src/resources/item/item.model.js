@@ -6,7 +6,8 @@ const itemSchema = new mongoose.Schema(
       type: String,
       required: true,
       trim: true,
-      maxlength: 50
+      maxlength: 50,
+      default: 'name'
     },
     status: {
       type: String,
@@ -24,7 +25,7 @@ const itemSchema = new mongoose.Schema(
     list: {
       type: mongoose.SchemaTypes.ObjectId,
       ref: 'list',
-      required: true
+      required: false
     }
   },
   { timestamps: true }
